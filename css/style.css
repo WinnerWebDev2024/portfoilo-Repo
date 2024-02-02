@@ -28,7 +28,7 @@ body{
     background-color: var(--bg-general);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 22%, 3%, 50%, 3%, 22%;
+    grid-template-rows: 22% 3% 50% 3% 22%;
     grid-template-areas: 
     "cabecera"
     "waves1"
@@ -93,6 +93,7 @@ nav ul li a:hover {
 }
 
 @media screen and (min-width: 1024px){
-    font-size: 1.5rem;
-    
+    body{
+    font-size: 1.5rem;    
+}
 }
