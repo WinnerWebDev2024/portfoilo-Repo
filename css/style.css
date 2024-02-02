@@ -5,3 +5,94 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Variables */
+:root{
+    height: 100%;
+    --text-color-primary : #f9f9f9;
+    --text-color-secundary: #0109;
+    --bg-header-footer: #011526 ;
+    --bg-general: #025959;
+    --bg-forms: #63bfae;
+    --bg-boxes-buton-primary: #04d9b2;
+    --bg-boxes-buton-secundary: #05f2af;
+    --font-size-primary: 18px;
+    --font-family-text: 'Courier Prime', monospace;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    /* box-sizing: inherit; */
+    font-size: var(--font-size-primary);
+    font-family: var(--font-family-text);
+    color: var(--text-color-primary);
+    background-color: var(--bg-general);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 22%, 3%, 50%, 3%, 22%;
+    grid-template-areas: 
+    "cabecera"
+    "waves1"
+    "cuerpo"
+    "waves2"
+    "pie";
+}
+header{
+    grid-area: cabecera;
+    background-color: var(--bg-header-footer);
+    color: var(--text-color-primary);
+}
+header figure{
+    width: 50%;
+    height: auto;
+
+}
+header figure img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: .5em solid var(--bg-header);
+}
+/* efecto olas */
+.wave-header{
+    grid-area: waves1;
+    background-color: var(--bg-general);
+}
+.wave-footer{
+    grid-area: waves2;
+    background-color: var(--bg-header-footer);
+}
+footer {
+    grid-area: pie;
+    background: var(--bg-header-footer);
+    padding: 2em;
+}
+nav {
+    padding: 2em;
+    background-color: var(--color-darkmode-two);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+}
+
+nav ul li {
+    line-height: 2em;
+}
+
+nav ul li a {
+    color: var(--color-darkmode-three);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1024px){
+    font-size: 1.5rem;
+    
+}
