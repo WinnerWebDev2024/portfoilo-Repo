@@ -28,7 +28,7 @@ body{
     background-color: var(--bg-general);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 22% 3% 50% 3% 22%;
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
     "cabecera"
     "waves1"
@@ -40,6 +40,9 @@ header{
     grid-area: cabecera;
     background-color: var(--bg-header-footer);
     color: var(--text-color-primary);
+}
+main{
+    grid-area: cuerpo;
 }
 header figure{
     width: 50%;
