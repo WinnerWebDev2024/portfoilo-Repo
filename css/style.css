@@ -28,7 +28,7 @@ body{
     background-color: var(--bg-general);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: auto 10vh 100vh 10vh auto;
     grid-template-areas: 
     "cabecera"
     "waves1"
