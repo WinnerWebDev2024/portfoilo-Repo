@@ -100,7 +100,11 @@ main{
     flex-direction: column;
 }
 
-
+.wave-footer{
+    height: 100px;
+  overflow: hidden;
+  background-color: var(--bg-general);
+}
 footer {
     background: var(--bg-header-footer);
     padding: 2em;
@@ -188,9 +192,19 @@ footer {
 }
 
 /* stilos del las habilidades */
+.skills{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.skills h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
 .skills-sliders{
-    min-height: 100vh;
-    background-color: #efc076;
+    min-height: 60%;
+    /* background-color: #efc076; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,26 +213,35 @@ footer {
 .container-slider{
     width: 90%;
     max-width: 900px;
-    box-shadow: 0 0 0 10px #fff, 0 15px 50px;
+    /* box-shadow: 0 0 0 10px #fff, 0 15px 50px; */
     position: relative;
     overflow: hidden;
 }
 
 .slider{
-    height: 400px;
-    width: 400%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    height: 700px;
+    width: 300%;
     margin-left: -100%;
 }
 
 .slider-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
     width: 100%;
+    height: auto;
 }
 
 .slider-img{
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -248,14 +271,71 @@ footer {
     background-color: #fff;
     cursor: pointer;
 }
+.contact{
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.contact h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+.contac-figure{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.contac-figure img{
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+}
+.main-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
- 
+.main-form input{
+    margin: 1rem 3rem;
+    padding: 2rem;
+}
+}
+@media only screen and (max-width: 425px){
+
+.main-form input{
+    margin: 1rem 0;
+    padding: 1.5rem;
+}
+}
 @media screen and (min-width: 771px){
+    
+
     body{
         font-size: 1rem;    
     }
-    header {
+    .container header{
+        order: 1;
+    }
+    .container nav{
+        order: 2;
+    }
+    .container main{
+        order: 3;
+    }
+    .container .wave-footer{
+        order: 4;
+    }
+    .container footer{
+        order: 5;
+    }
+
+
+
+
+
+    header {    
         display: grid;
         grid-template-columns: 75% 25%;
         grid-template-rows: auto;

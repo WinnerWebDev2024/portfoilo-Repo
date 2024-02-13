@@ -16,12 +16,6 @@
 
 <body>
     <div class="container">
-        <header>
-            <h1>My Name Is Jaime Rodriguez</h1>
-            <figure>
-                    <img src="img/picture_mine.jpg" alt="">
-            </figure>
-        </header>
         <nav>
             <!-- Icono -->
             <div class="icono" id="icono">
@@ -36,6 +30,13 @@
                 <li><a href="">Contact Me</a></li>
             </ul>
         </nav>
+        <header>
+            <h1>My Name Is Jaime Rodriguez</h1>
+            <figure>
+                    <img src="img/picture_mine.jpg" alt="">
+            </figure>
+        </header>
+
         <main>
             <section class="about-me">
                 <h2>About Me</h2>
@@ -47,13 +48,13 @@
                     <div class="container-slider">
                         <div id="slider" class="slider">
                             <figure class="slider-section">
-                                <img src="img/slider1.jpg" alt="Slider 1" class="slider-img">
+                                <img src="img/html5-logo.png" alt="Slider 1" class="slider-img">
                             </figure>
                             <figure class="slider-section">
-                                <img src="img/slider2.jpg" alt="Slider 2" class="slider-img">
+                                <img src="img/javascript-logo.png" alt="Slider 2" class="slider-img">
                             </figure>
                             <figure class="slider-section">
-                                <img src="img/slider3.jpg" alt="Slider 3" class="slider-img">
+                                <img src="img/css3-logo.png" alt="Slider 3" class="slider-img">
                             </figure>
                         </div>
                         <div class="slider-btn slider-btn-right" id="btn-right">&#62;</div>
@@ -83,26 +84,17 @@
             </section>
             <section class="contact">
                 <h2>CONTACT ME</h2>
-                <form class="form">
-                    <h2 class="form-title">I will be in touch soon.</h2>
-                    <div class="container">
-                        <div class="items">
-                        <input type="text" id="names" class="input" placeholder=" ">
-                        <label for="names" class="label">Names</label>
-                        <span class="line"></span>
-                        </div>
-                        <div class="items">
-                            <input type="text" id="last-n" class="input" placeholder=" ">
-                            <label for="last-n" class="label">Last Names</label>
-                            <span class="line"></span>
-                        </div>                    <div class="items">
-                            <input type="email" id="e-mail" class="input" placeholder=" ">
-                            <label for="e-mail" class="label">E-Mail Adders</label>
-                            <span class="line"></span>
-                        </div>
-                        <input type="submit" class="submit"  value="Submit">
-                    </div>
-                </form>
+                <div class="main-contact">
+                    <figure class="contac-figure">
+                        <img src="https://lorem.cat/300x300/00adb5/" alt="lorent.cat">
+                    </figure>
+                    <form class="main-form">
+                        <input type="text" name="nombre" id="nombre" class="main-input">
+                        <input type="text" name="apellido" id="apellido" class="main-input">
+                        <input type="email" name="correo" id="correo" class="main-input">
+                        <input type="submit" value="Send" id="button" class="main-button">
+                    </form>                
+                </div>
             </section>
         </main>
         <!-- holas -->
