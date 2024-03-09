@@ -9,50 +9,45 @@ BOTON.addEventListener('click', () =>{
     }, 600);
 });
 
-// slider skills
-// Declaración de variables
-const SLIDER = document.querySelector('#slider');
-let sliderSection = document.querySelectorAll('.slider-section');
+// scripts para los sliders
 
-// Seleccionamos el últiomo slider
-let sliderSectionLast = sliderSection[sliderSection.length-1];
+const sliders = [...document.querySelectorAll('.slider__body')];
+const arrowNext = document.querySelector('#next');
+const arrowBefore = document.querySelector('#before');
+let value;
+
+arrowNext.addEventListener('click', ()=>changePosition(1));
+
+arrowBefore.addEventListener('click', ()=>changePosition(-1));
+
+function changePosition(change){
+    const currentElement = Number(document.querySelector('.slider__body--show').dataset.id);
+    // 4+1 = 5
+    value = currentElement;
+    value+= change;
+
+    console.log(sliders.length)
+    if(value === 0 || value == sliders.length+1){
+        value = value === 0 ? sliders.length : 1;
+    }
+
+    sliders[currentElement-1].classList.toggle('slider__body--show');
+    sliders[value-1].classList.toggle('slider__body--show');
+}
+
+const changePositionNew = (change2 = 1)=>{
+    const currentElement = Number(document.querySelector('.slider__body--show').dataset.id);
+    value = currentElement;
+    value+= change2;
+
+    console.log(sliders.length)
+    if(value === 0 || value == sliders.length+1){
+        value = value === 0 ? sliders.length : 1;
+    }
+
+    sliders[currentElement-1].classList.toggle('slider__body--show');
+    sliders[value-1].classList.toggle('slider__body--show');
+}
+setInterval (changePositionNew, 3000);
 
 
-//Declaramos variables para los botones
-const btnLeft = document.querySelector('#btn-left');
-const btnRight = document.querySelector('#btn-right');
-
-
-// Situamos la última imagen en la primera posición
-SLIDER.insertAdjacentElement('afterbegin', sliderSectionLast);
-
-
-// Función listener para el botón derecho
-btnRight.addEventListener('click', () =>{
-    let sliderSectionFirst = document.querySelectorAll('.slider-section')[0];
-    SLIDER.style.marginLeft = '-200%';
-    SLIDER.style.transition = 'all 0.5s';
-    setTimeout(() =>{
-        SLIDER.style.transition = 'none';
-        SLIDER.insertAdjacentElement('beforeend', sliderSectionFirst);
-        SLIDER.style.marginLeft = '-100%';
-    }, 500);
-});
-
-// Función listener para el botón izquierdo
-const MOVERIZQUIERDA = () =>{
-    let sliderSection = document.querySelectorAll('.slider-section');
-    let sliderSectionLast = sliderSection[sliderSection.length-1];
-    SLIDER.style.marginLeft = '0';
-    SLIDER.style.transition = 'all 0.5s';
-    setTimeout(() =>{
-        SLIDER.style.transition = 'none';
-        SLIDER.insertAdjacentElement('afterbegin', sliderSectionLast);
-        SLIDER.style.marginLeft = '-100%';
-    }, 500);
-};
-
-btnLeft.addEventListener('click', MOVERIZQUIERDA);
-
-// Automatización
-setInterval(MOVERIZQUIERDA, 5000);
