@@ -1,7 +1,6 @@
-<link rel="stylesheet" href="css/style-nav.css">
-<nav>
+<div class="menu">
     <!-- Icono del boton menu  -->
-<div class="icono" id="icono">
+    <div class="icono" id="icono">
         <i class="fa-solid fa-bars"></i>
     </div>
     <!-- Menú de navegación -->
@@ -12,4 +11,4 @@
         <li><a href="">PortFolio</a></li>
         <li><a href="">Contact Me</a></li>
     </ul>
-</nav>
+</div>

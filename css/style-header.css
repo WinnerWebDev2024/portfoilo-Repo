@@ -2,7 +2,8 @@
 
 /* Estilos de los Sliders */
 .container{
-    width: 90%;
+    flex: 0 0 40vh;
+    width: 70%;
     min-height: 100vh;
     margin: 0 auto;
 
@@ -17,9 +18,9 @@
 .slider__container{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
     grid-template-rows: auto;
     align-items: center;
+    grid-template-columns: 50px 1fr 50px;
 
 }
 
@@ -33,6 +34,7 @@
     transition: opacity 1.5s;
     height: 100%;
     align-content: center;
+
 }
 
 .slider__body--show{
@@ -64,11 +66,10 @@
 @media only screen and (max-width: 768px){
 
    /* medias para los sliders */
-    .slider__body{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 1em;
+   .slider__container{
+        grid-template-columns: 25px 1fr 25px;
     }
+
     .slider__picture{
         display: grid;
         align-content: center;

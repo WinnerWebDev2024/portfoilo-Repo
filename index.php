@@ -12,20 +12,25 @@
     <script src="https://kit.fontawesome.com/f5cc441255.js" crossorigin="anonymous"></script>
     <!-- Estilos -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-header.css">
+    <link rel="stylesheet" href="css/style-nav.css">
+
+
 </head>
 
 <body>
-        <!-- <nav> -->
+        <nav>
             <?php include('php/nav.php');?>
-        <!-- </nav> -->
-        <!-- <header> -->
+        </nav>
+        <header>
             <?php include('php/header.php');?>
-        <!-- </header> -->
+        </header>
         <main>
 
         </main>
-
-
+        <footer>
+            
+        </footer>
         <!-- mine scripts -->
     <script src="js/scripts.js"></script>
 </body>
