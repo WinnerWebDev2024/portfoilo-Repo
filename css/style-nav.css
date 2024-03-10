@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+nav{
+    margin: 0 auto;
+
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    background: linear-gradient(-45deg, rgba(1, 21, 38, .8), rgba(1, 21, 38, .8)) fixed, url(../img/header-background.jpg) fixed;
+    background-size: cover;
+    justify-content: end;
+    max-height: 100vh;
+}
+
+nav ul{
+
+    width: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+nav ul li a{
+
+    color: var(--text-color-primary);
+
+    text-decoration: none;
+
+    border-top: 1px solid transparent;
+
+    border-bottom: 1px solid transparent;
+
+    padding: 4px 0;
+
+    transition: .7s ease-out;
+
+}
+
+nav ul a:hover, #active{
+
+    border-color: var(--text-color-primary);
+
+} 
+
+@media only screen and (max-width: 768px){
+
+    .icono{
+    
+        display: flex;
+    
+        font-size: 1.5rem;
+    
+        margin: 2rem;
+    
+        z-index: 2; 
+    
+    }
+    
+    .icono i:hover{
+    
+        cursor: pointer;
+    
+    }
+    
+    .enlaces{
+    
+        font-size: 2rem;
+    
+        height: 100vh;
+    
+        width: 100%;
+    
+        position: fixed;
+    
+        top: 0;
+    
+        right: 0;
+    
+        z-index: 1;
+    
+        flex-direction: column;
+    
+        align-items: center;
+    
+        transition: all 1.5s ease;
+    
+        background: rgb(0, 0, 0); 
+    
+        background: linear-gradient(-45deg, rgba(1, 21, 38, .8), rgba(1, 21, 38, .8)) fixed, url(../img/header-background.jpg) fixed;
+    
+        background-size: cover;
+    
+    }
+    
+    .close{
+    
+        clip-path: circle(0% at 100% 0%);
+    
+    }
+    
+    .open{
+    
+        clip-path: circle(150% at 100% 0%);
+    
+    }
+}

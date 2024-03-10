@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+*,*::after,*::before{
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+/* Variables */
+
+:root{
+
+    --text-color-primary : #f9f9f9;
+
+    --text-color-secundary: #0109;
+
+    --bg-header-footer: #011526 ;
+
+    --bg-general: #025959;
+
+    --bg-forms: #63bfae;
+
+    --bg-boxes-buton-primary: #04d9b2;
+
+    --bg-boxes-buton-secundary: #05f2af;
+
+    font-size: 18px;
+
+    --font-family-text: 'Courier Prime', monospace;
+
+}
+
+body{
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+    width: 100vw;
+
+    max-width: 1920px;
+
+    margin: 0 auto;
+
+    font-size: 1rem;
+
+    font-size: var(--font-size-primary);
+
+    font-family: var(--font-family-text);
+
+    color: var(--text-color-primary);
+
+    background-color: var(--bg-general);
+}
