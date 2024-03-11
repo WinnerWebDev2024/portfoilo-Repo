@@ -22,7 +22,10 @@
         <nav>
             <?php include('php/nav.php');?>
         </nav>
+        
         <header>
+            <h1>Hey, My Name Is Jaime;</h1>
+            <h2>and These are My Skills!!!</h2>
             <?php include('php/header.php');?>
         </header>
         <main>

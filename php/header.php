@@ -22,17 +22,17 @@
 
         <section class="slider__body" data-id="4">
             <figure class="slider__picture">
-                <img src="img/css3-logo.png" alt="img4-04" class="slider__img">
+                <img src="img/php-logo.png" alt="img4-04" class="slider__img">
             </figure>
         </section>
         <section class="slider__body" data-id="5">
             <figure class="slider__picture">
-                <img src="img/javascript-logo.png" alt="img5-01" class="slider__img">
+                <img src="img/github-logo.png" alt="img5-01" class="slider__img">
             </figure>
         </section>
         <section class="slider__body" data-id="6">
             <figure class="slider__picture">
-                <img src="img/html5-logo.png" alt="img6-01" class="slider__img">
+                <img src="img/bootstrap-logo.png" alt="img6-01" class="slider__img">
             </figure>
         </section>
         <section class="slider__body" data-id="7">
