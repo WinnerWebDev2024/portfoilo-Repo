@@ -14,9 +14,8 @@
 }
 
 .slider{
-    width: 80%;
+    width: 90%;
     opacity: 1;
-    /* background-color: var(--bg-forms); */
     padding: 40px 0;
 }
 
@@ -33,7 +32,6 @@
     opacity: 0;
     pointer-events: none;
     display: grid;
-    /* background-color:var(--bg-forms); */
     grid-template-columns: 1fr max-content;
     align-items: center;
     transition: opacity 1.5s;
@@ -65,7 +63,7 @@
 @media (max-width:768px){
     h1, h2{
         text-align: center;
-        font-size: 2rem;
+        font-size: 10rem;
     }
     .slider__body{
         grid-template-columns: 1fr;
@@ -94,7 +92,7 @@
         grid-template-rows: max-content 1fr;
         gap: 1em;
     }
-    .slider__container{
+    .container{
         grid-template-columns: 25px 1fr 25px;
     }
 
