@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/style-header.css">
+
 <div class="slider">
     <div class="slider__container container">
         <img src="img/bx-chevron-left.svg" alt="bx-chevron-left" class="slider__arrow" id="before">
