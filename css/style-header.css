@@ -1,54 +1,52 @@
 @charset "utf-8";
 
 /* Estilos de los Sliders */
-.container{
-    flex: 0 0 40vh;
-    width: 70%;
-    min-height: 100vh;
-    margin: 0 auto;
 
+.container{
+    width: 80%;
+    min-height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+    align-content: center;
+    justify-content: center;
+    display: flex;
 }
 
 .slider{
-    background-color: var(--color-bg-he-fo);
+    width: 80%;
+    background-color: #f2f2f2;
     padding: 40px 0;
-    
 }
 
 .slider__container{
-    margin: 0 auto;
     display: grid;
-    grid-template-rows: auto;
-    align-items: center;
     grid-template-columns: 50px 1fr 50px;
-
+    align-items: center;
+    gap: 1em;
 }
 
 .slider__body{
     grid-column: 2/3;
-    grid-row: 1;
+    grid-row: 1/2;
     opacity: 0;
     pointer-events: none;
     display: grid;
-    background-color:var(--color-bg-he-fo);
+    background-color: #f2f2f2;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
     transition: opacity 1.5s;
-    height: 100%;
-    align-content: center;
-
 }
 
 .slider__body--show{
-    margin: auto;
     opacity: 1;
     pointer-events: unset;
-    height: 100%;
-    align-content: center;
 }
 
+
 .slider__img{
-    width: 330px;
-    height: 330px;
-    /* border-radius: 50%; */
+    width: auto;
+    height: auto;
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -56,46 +54,41 @@
 
 .slider__arrow{
     cursor: pointer;
-    width: 90%;
+    width: 150%;
 }
 
 .slider__arrow:nth-of-type(2){
     justify-self: end;
 }
 
-@media only screen and (max-width: 768px){
-
-   /* medias para los sliders */
-   .slider__container{
-        grid-template-columns: 25px 1fr 25px;
+@media (max-width:768px){
+    .slider__body{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 1em;
     }
 
     .slider__picture{
-        display: grid;
-        align-content: center;
-        height: 100%;
+        grid-row: 1/2;
     }
 
     .slider__img{   
         width: auto;
         height: auto;
-        object-fit: cover;
     }
 }
 
-
 @media (max-width:425px){
-
     .slider__container{
-        grid-template-columns: 15px 1fr 15px;
+        grid-template-columns: 25px 1fr 25px;
     }
 
     .slider__arrow{
-        font-size: 1.5rem;
+       width: 100%;
     }
 
     .slider__img{   
-        width: auto;
+        width: 180px;
         height: auto;
     }
 }
